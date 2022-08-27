@@ -1,10 +1,13 @@
 import "./productList.css";
 import Product from "../product/Product";
 import { products } from "../../data";
+import { Element } from "react-scroll";
 
 const ProductList = () => {
   return (
-    <div className="pl">
+
+    <Element>
+      <div className="pl">
       <div className="pl-texts">
         <h1 className="pl-title">My Projects</h1>
         <p className="pl-desc">
@@ -19,6 +22,8 @@ const ProductList = () => {
         ))}
       </div>
     </div>
+    </Element>
+
   );
 };
 

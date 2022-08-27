@@ -5,6 +5,7 @@ import Address from "../../img/address.png";
 import { useContext, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { ThemeContext } from "../../context";
+import { Element } from "react-scroll";
 
 const Contact = () => {
   const formRef = useRef();
@@ -33,42 +34,48 @@ const Contact = () => {
   };
 
   return (
-    <div className="c">
-      <div className="c-bg"></div>
-      <div className="c-wrapper">
-        <div className="c-left">
-          <h1 className="c-title">Let's discuss your project</h1>
-          <div className="c-info">
-            <div className="c-info-item">
-              <img src={Phone} alt="" className="c-icon" />
-              +91 80721 53544
-            </div>
-            <div className="c-info-item">
-              <img className="c-icon" src={Email} alt="" />
-              siva29061997@gmail.com
-            </div>
-            <div className="c-info-item">
-              <img className="c-icon" src={Address} alt="" />
-              2/45, Periyakulam Theni TamilNadu India
+    <Element>
+      <div className="c">
+        <div className="c-bg"></div>
+        <div className="c-wrapper">
+          <div className="c-left">
+            <h1 className="c-title">Let's discuss your project</h1>
+            <div className="c-info">
+              <div className="c-info-item">
+                <img src={Phone} alt="" className="c-icon" />
+                +91 80721 53544
+              </div>
+              <div className="c-info-item">
+                <img className="c-icon" src={Email} alt="" />
+                siva29061997@gmail.com
+              </div>
+              <div className="c-info-item">
+                <img className="c-icon" src={Email} alt="" />
+                siva29061997@gmail.com
+              </div>
+              <div className="c-info-item">
+                <img className="c-icon" src={Address} alt="" />
+                2/45, Periyakulam Theni TamilNadu India
+              </div>
             </div>
           </div>
-        </div>
-        <div className="c-right">
-          <p className="c-desc">
-            <b>What’s your story?</b> Get in touch. Always available for
-            freelancing if the right project comes along. me.
-          </p>
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Name" name="user_name" />
-            <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Subject" name="user_subject" />
-            <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Email" name="user_email" />
-            <textarea style={{backgroundColor: darkMode && "#333"}} rows="5" placeholder="Message" name="message" />
-            <button>Submit</button>
-            {done && "Thank you..."}
-          </form>
+          <div className="c-right">
+            <p className="c-desc">
+              <b>What’s your story?</b> Get in touch. Always available for
+              freelancing if the right project comes along. me.
+            </p>
+            <form ref={formRef} onSubmit={handleSubmit}>
+              <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Name" name="user_name" />
+              <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Subject" name="user_subject" />
+              <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Email" name="user_email" />
+              <textarea style={{ backgroundColor: darkMode && "#333" }} rows="5" placeholder="Message" name="message" />
+              <button>Submit</button>
+              {done && "Thank you..."}
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

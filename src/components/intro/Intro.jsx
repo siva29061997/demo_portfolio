@@ -1,9 +1,11 @@
 import "./intro.css";
 import Me from "../../img/me.png";
+import { Element } from "react-scroll";
 
 const Intro = () => {
   return (
-    <div className="i">
+    <Element>
+      <div className="i">
       <div className="i-left">
         <div className="i-left-wrapper">
           <h2 className="i-intro">Hello, My name is</h2>
@@ -85,6 +87,7 @@ const Intro = () => {
         <img src={Me} alt="" className="i-img" />
       </div>
     </div>
+    </Element>
   );
 };
 
